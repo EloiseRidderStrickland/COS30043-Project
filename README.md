@@ -9,3 +9,5 @@ This repository and all packages used for its deployment are for the purpose of 
 ## Stage 2 - 
 
 ## Stage 3 -
+
+README.md formatting: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax 
