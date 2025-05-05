@@ -77,3 +77,24 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* -- Added Styles -- */
+p {
+ text-align: left;
+}
+
+body {
+  background-color: #242424;
+  color: white;
+}
+
+ol {
+  text-align: left;
+  margin: 20px;
+}
+
+.structure {
+  font-family: 'Courier New', monospace;
+  font-size: x-small;
+}
+
