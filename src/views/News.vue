@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <h2>NEWS</h2>
+    <h2>News</h2>
   
     <div class="containers">
       <div class="row">

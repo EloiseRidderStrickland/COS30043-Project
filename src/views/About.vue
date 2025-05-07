@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <h2>ABOUT</h2>
+    <h2>About</h2>
   
     <div class="containers">
       <div class="row">

@@ -15,5 +15,37 @@ Content will be organised into three categories:
 + **Foliage:** Plants & foods
 + **Aquatic:** Fish & Animals
 
+### File Structure -- Draft -- 
+            COS30043/
+            ├──.vscode
+            |     └── extension.json
+            ├── framework/
+            |      ├── css/
+            |      └── js/
+            ├── node_modules/
+            |      └── (.modules/ x27)
+            ├── public/
+            |      ├── assets/
+            |      |     └── (images x5)
+            |      └── wallpapers/
+            |            └── (images x7)
+            ├──── src/
+            |      ├── assets/
+            |      |     └── (Private Images x2)
+            |      ├── router/
+            |      |     └── index.js 
+            |      ├── views/
+            |      |     ├── About.vue
+            |      |     ├── Home.vue
+            |      |     └── News.vue
+            |      ├── App.vue
+            |      ├── main.js
+            |      └── styles.css
+            ├── .gitignore
+            ├── index.html
+            ├── package-lock.json
+            ├── package.json
+            ├── README.md
+            ├── vite.config.js
 
 README.md Formatting Guide: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax 

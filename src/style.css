@@ -1,9 +1,13 @@
 
-  body {
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+ 
+ body {
     background-image: url('/wallpapers/moss-wallpaper-5.jpg'); 
-    background-position: center;
-    background-size: cover; /* makes it scale with window */
-    background-repeat: no-repeat;
+    background-size: cover; 
 
     color: rgb(255, 255, 255);
     place-items: center;
@@ -16,15 +20,29 @@
     line-height: 1.1;
   }
   
+  h2, h3, h4, h5, h6 {
+    margin: 0;
+    line-height: 1.2;
+  }
+
   #app {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 15px;
     text-align: center;
+  }
+
+/* -- Utility Class -- */
+  .full-width {
+    width: 100vw;
+    position: relative;
+    left: calc(-50vw + 50%);
   }
   
   .main {
-    padding-top: 400px;   
+    padding-top: 50px;   
   }
 
   .containers
