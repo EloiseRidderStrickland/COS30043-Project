@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: 1px solid red;
  }
  
  body {
@@ -26,7 +27,7 @@
   }
 
   #app {
-    max-width: 1280px;
+    /*max-width: 1280px;*/
     margin: 0 auto;
     padding-left: 2rem;
     padding-right: 2rem;
@@ -39,15 +40,9 @@
     width: 100vw;
     position: relative;
     left: calc(-50vw + 50%);
+    outline: 1px solid rgb(0, 106, 255);
   }
   
   .main {
     padding-top: 50px;   
   }
-
-  .containers
-  {
-    background-color: rgba(73, 117, 109, 0.801);
-    /*border-radius: 3em;*/
-  }
-  
