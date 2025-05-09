@@ -1,15 +1,13 @@
-How could I make the header bar, as it is, but move with the content on the page?
-
 <template>
-  <header class="full-width">
+  <header class="outer">
         <div class="row">
           <div class="box col-sm-2 mt-3">
-            <div class="bold">Air-iums.com</div>
+            <div>Air-iums.com</div>
           </div>
 
             <div class="col-sm mt-3">
              <div class="bar-nav">
-              <nav>
+              <nav class="bold">
                 <router-link to="/">Home</router-link>
                 <router-link to="/news">News</router-link>
                 <router-link to="/about">About</router-link>
@@ -33,20 +31,19 @@ How could I make the header bar, as it is, but move with the content on the page
 
         <div class="col-12 header-title">
           <div>
-            <h1>Build Worlds</h1>
-            <h1>Create Anything</h1>
+            <h1>"Build Worlds</h1>
+            <h1>Create Anything."</h1>
           </div>
         </div>
       
         <div class="col-6 header-subtitle">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-              ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
-              eu fugiat nulla pariatur. 
+              <em>"From our world to yours, explore our range of handcrafted microworlds 
+              made to order, or choose from hundreds of hand-picked accessories; 
+              substrate, rock, plants, foliage, fish, insects and more! to craft your very own."</em>
             </p>
           <div class="sign">
-            Eloise RidderStrickland
+            ~ Eloise RidderStrickland
           </div>
         </div>
   </header>
@@ -57,18 +54,25 @@ How could I make the header bar, as it is, but move with the content on the page
 
 header 
 {
-  background-image: url('/wallpapers/tree-wallpaper-2.jpg');
+  background-image: url('/wallpapers/moss-wallpaper-4.jpg');
   background-color: rgb(88, 107, 87);
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 20px;
+  padding: 20px;
+  transition: transform .2s;
+}
+
+header:hover
+{
+  transform: scale(102%);
 }
 
 .header-title
 {
   padding-top: 95px;
-  padding-left: 50px;
+  padding-left: 80px;
   text-align: left;
-  font-size: 23px;
   font-family: 'Kindmight', sans-serif;
 }
 
@@ -76,8 +80,8 @@ header
 {
   justify-content: space-between; 
   padding-top: 10px;
-  padding-bottom: 95px;
-  padding-left: 50px;
+  padding-bottom: 110px;
+  padding-left: 80px;
   text-align: justify;
 }
 
@@ -92,6 +96,12 @@ header
   margin: 0 10px;
   text-decoration: none;
   color: white; 
+  transition: transform .2s;
+}
+
+nav:hover
+{
+  transform: scale(101%);
 }
 
 img {
@@ -102,7 +112,7 @@ img {
 
 .search
 {
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(0, 0, 0, 0.4);
   font-weight: 1em;
   border: none;
   text-indent: 10px;
@@ -115,12 +125,13 @@ img {
 
 input, select, search{
     color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border-radius: 5px 5px 0px 0px;
 }
 
 search:focus, input:focus {
     color: rgb(255, 255, 255);
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
+    border-radius: 5px 5px 0px 0px;
 }
 
 /* -- BUTTON CONTROLS -- */
@@ -159,6 +170,26 @@ search:focus, input:focus {
 .button:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+h1 {
+  /* Extra small devices (phones, less than 768px) */
+  font-size: 40px;
+
+  /* Small devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+    font-size: 50px;
+  }
+
+  /* Medium devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    font-size: 60px;
+  }
+
+  /* Large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    font-size: 70px;
+  }
 }
 
 </style>
