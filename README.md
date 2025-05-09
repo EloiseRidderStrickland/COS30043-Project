@@ -53,3 +53,7 @@ README.md Formatting Guide: https://docs.github.com/en/get-started/writing-on-gi
 Icon Source: https://www.flaticon.com/
 
 Insta Icon: https://www.flaticon.com/free-icons/instagram Instagram icons created by Andrew Dynamite - Flaticon
+
+Website Design Guide: https://land-book.com/
+
+Fonts: https://www.cdnfonts.com/
