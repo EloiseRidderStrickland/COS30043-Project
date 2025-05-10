@@ -50,10 +50,10 @@ Content will be organised into three categories:
 
 README.md Formatting Guide: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax 
 
-Icon Source: https://www.flaticon.com/
+Free Web Icons: https://www.flaticon.com/
 
-Insta Icon: https://www.flaticon.com/free-icons/instagram Instagram icons created by Andrew Dynamite - Flaticon
+Website Design Inspirations: https://land-book.com/
 
-Website Design Guide: https://land-book.com/
+Free Fonts: https://www.cdnfonts.com/
 
-Fonts: https://www.cdnfonts.com/
+Free Stock Images: https://www.pexels.com/

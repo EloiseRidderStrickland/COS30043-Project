@@ -4,14 +4,14 @@
 
   <div class="main">
    <div class="row">
-    <div class="outer title col-sm p-3">
+    <div class="outer col-sm p-3">
       <h2>Welcome!</h2><br>
         <p><em>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
           exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
       </em></p>
     </div>
-    <div class="outer title col-sm p-3">
+    <div class="outer col-sm p-3">
       <h2>Popular</h2><br>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
@@ -38,7 +38,7 @@
             <em>"When you can have forever, with our curated range of natural resources.
             sure to impress in any style. Bring some magic to your space."</em>
           </p>
-        <div class="sign">
+        <div class="sign-right">
             ~ Timothy Mifsud
         </div>
       </div>
@@ -105,7 +105,7 @@
       </div>
     </div>
 
-  <!------ Mini Boxes SET TWO ------>
+  <!------ Mini Boxes SET THREE ------>
 
   <div class="main">
     <div class="outer">
@@ -120,34 +120,34 @@
           </div>
     </div>
   </div>
+
+  <!------ MOSS THEME HEADER ------>
+
+  <div class="outer moss">
+        <div class="col-12 moss-title">
+          <div>
+            <h1>"Fly High</h1>
+            <h1>Live Limitless."</h1>
+          </div>
+        </div>
+      
+  <div class="row">
+    <div class="col-sm-5"></div>
+      <div class="col-sm-7 moss-subtitle">
+          <p>
+            <em>"When you can have forever, with our curated range of natural resources.
+            sure to impress in any style. Bring some magic to your space."</em>
+          </p>
+        <div class="sign-right">
+            ~ Coco The Cat
+        </div>
+      </div>
+    </div>
+  </div>
     
   </template>
 
   <style scoped>
-   
-    .title
-    {
-      /*background-image: url('/assets/dark-trees.jpg');*/
-      background-color: rgb(0, 0, 0);
-      background-position: center;
-      background-size: 50%;
-      color: rgb(255, 255, 255);
-      background-repeat: no-repeat;
-      text-align: left;
-      transition: transform .2s;
-      text-align: center;
-    }
-    
-    .title:hover
-    {
-      transform: scale(102%);
-    }
-
-    .main
-    {
-      padding-right: 20px;
-      padding-left: 5px;
-    }
 
     p
     {
@@ -156,6 +156,7 @@
 
     /* -- HEADER BOX CONTROLS -- */
 
+/* ---- WOOD THEME HEADER ----- */
 .wood
 {
   background-image: url('/wallpapers/wood-wallpaper-1.jpg');
@@ -189,6 +190,8 @@
   padding-right: 90px;
   text-align: justify;
 }
+
+/* ---- STONE THEME HEADER ----- */
 
 .stone
 {
@@ -224,12 +227,57 @@
   text-align: justify;
 }
 
+/* ---- MOSS THEME HEADER ----- */
+.moss
+{
+  background-image: url('/wallpapers/cave-wallpaper-1.jpg');
+  background-color: rgb(88, 107, 87);
+  color: rgb(255, 255, 255);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  padding: 20px;
+  transition: transform .2s;
+}
+
+.moss:hover
+{
+  transform: scale(101%);
+}
+
+.moss-title
+{
+  padding-top: 75px;
+  padding-right: 80px;
+  text-align: right;
+  font-family: 'Kindmight', sans-serif;
+}
+
+.moss-subtitle
+{
+  justify-content: space-between; 
+  padding-top: 10px;
+  padding-bottom: 75px;
+  padding-right: 90px;
+  text-align: justify;
+}
+
+/* -- END MAIN -- */
+
 .sign 
 {
   font-family: 'Southera', sans-serif;
   font-size: 25px;
   text-align: left;
 }
+
+.sign-right
+{
+  font-family: 'Southera', sans-serif;
+  font-size: 25px;
+  text-align: right;
+}
+
 
 
   </style>
