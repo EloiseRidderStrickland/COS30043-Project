@@ -177,24 +177,4 @@ search:focus, input:focus {
   right: 0;
 }
 
-h1 {
-  /* Extra small devices (phones, less than 768px) */
-  font-size: 40px;
-
-  /* Small devices (tablets, 768px and up) */
-  @media (min-width: 768px) {
-    font-size: 50px;
-  }
-
-  /* Medium devices (desktops, 992px and up) */
-  @media (min-width: 992px) {
-    font-size: 60px;
-  }
-
-  /* Large devices (large desktops, 1200px and up) */
-  @media (min-width: 1200px) {
-    font-size: 70px;
-  }
-}
-
 </style>
