@@ -1,7 +1,7 @@
 <template>
   <header class="outer">
         <div class="row">
-          <div class="box col-sm-2 mt-3">
+          <div class="company col-sm-2 mt-3">
             <div>Air-iums.com</div>
           </div>
 
@@ -22,7 +22,7 @@
               <button class="button" style="vertical-align:middle"><span>Sign-up</span></button>
           </div>
 
-          <div class="col-sm-2 mt-3">
+          <div class="col-sm-auto mt-3">
             <a href="https://github.com/EloiseRidderStrickland"><img src="/icons/white-icons/github-white.png" alt="GitHub" width="30"></a>
             <a href="https://discord.com/"><img src="/icons/white-icons/discord-white.png" alt="Discord" width="30"></a>
             <a href="https://au.pinterest.com/ers29740/"><img src="/icons/white-icons/pinterest-white.png" alt="Pinterest" width="30"></a>
@@ -65,7 +65,7 @@ header
 
 header:hover
 {
-  transform: scale(102%);
+  transform: scale(101%);
 }
 
 .header-title
@@ -89,7 +89,12 @@ header:hover
 {
   font-family: 'Southera', sans-serif;
   font-size: 25px;
-  padding-left: 0px;
+  text-align: left;
+}
+
+.company
+{
+  font-family: 'Kindmight', sans-serif;
 }
 
 .bar-nav nav a {
