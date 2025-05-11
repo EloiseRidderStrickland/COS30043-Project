@@ -96,11 +96,11 @@
     <div class="col-sm-5"></div>
       <div class="col-6 stone-subtitle">
           <p>
-            <em>"Where natural Beauty meets elegent style. Make an impression
+            <em>"Where natural Beauty meets elegent style. Make an impression, anywhere."
               "</em>
           </p>
         <div class="sign">
-            ~ Coco Mifsud
+            ~ Pebbles The Kitten
         </div>
       </div>
     </div>
@@ -230,7 +230,7 @@
 /* ---- MOSS THEME HEADER ----- */
 .moss
 {
-  background-image: url('/wallpapers/cave-wallpaper-1.jpg');
+  background-image: url('/wallpapers/reverse-moss-wallpaper-4.jpg');
   background-color: rgb(88, 107, 87);
   color: rgb(255, 255, 255);
   background-repeat: no-repeat;
@@ -277,7 +277,4 @@
   font-size: 25px;
   text-align: right;
 }
-
-
-
   </style>
