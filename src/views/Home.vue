@@ -26,8 +26,8 @@
   <div class="outer wood">
         <div class="col-12 wood-title">
           <div>
-            <h1>"Why Settle</h1>
-            <h1>For Temporary?"</h1>
+            <h1>"Natural</h1>
+            <h1>Resources"</h1>
           </div>
         </div>
       
@@ -35,7 +35,7 @@
     <div class="col-sm-5"></div>
       <div class="col-sm-7 wood-subtitle">
           <p>
-            <em>"When you can have forever, with our curated range of natural resources.
+            <em>"With our curated range of natural resources.
             sure to impress in any style. Bring some magic to your space."</em>
           </p>
         <div class="sign-right">
@@ -90,8 +90,8 @@
   <div class="outer stone">
         <div class="col-12 stone-title">
           <div>
-            <h1>"Go Further</h1>
-            <h1>Be The Impossible."</h1>
+            <h1>"Stones</h1>
+            <h1>& Substrate."</h1>
           </div>
         </div>
       
@@ -99,8 +99,10 @@
     <div class="col-sm-5"></div>
       <div class="col-6 stone-subtitle">
           <p>
-            <em>"Where natural Beauty meets elegent style. Make an impression, anywhere."
-              "</em>
+            <em>
+              "Where natural Beauty meets elegent style. Set the stage for
+              a world of wonder in any color, click below to browse our range."
+            </em>
           </p>
         <div class="sign">
             ~ Pebbles The Kitten
@@ -108,29 +110,13 @@
       </div>
     </div>
 
-  <!------ Mini Boxes SET THREE ------>
-
-  <div class="main">
-    <div class="outer">
-          <div class="container col-md m-2 p-3">
-            <h2>Stay In The Loop For Exclusive Offers!</h2><br>
-            <p>
-              T's & C's Apply. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. labore et dolore 
-          magna aliqua dolor sit amet, consectetur.
-            </p>
-          </div>
-    </div>
-  </div>
-
   <!------ MOSS THEME HEADER ------>
 
   <div class="outer moss">
         <div class="col-12 moss-title">
           <div>
-            <h1>"Fly High</h1>
-            <h1>Live Limitless."</h1>
+            <h1>"Plants</h1>
+            <h1>, Moss & Foliage."</h1>
           </div>
         </div>
       
@@ -147,19 +133,79 @@
       </div>
     </div>
   </div>
+
+   <!------ Mini Boxes SET FOUR ------>
+
+   <div class="row outer offer">
+      <div class="col-sm-6 offerx">
+          <div class="offerheader"><h2>Stay In The Loop!</h2></div>
+      <br><p>
+              Want Exclusive offers and deals delivered to your mailbox? 
+              enter your email or become a memeber! 
+              For a limited time get <u>10% off</u> your first purchase!
+            </p>
+      </div>
+
+      <div class="col-sm-6 offerx">
+          
+            
+      </div>
+  </div>
+  
+  <div class="main">
+    <div class="outer">
+          
+    </div>
+  </div>
     
   </template>
-
-  <!-- -- HEADER BOX CONTROLS -- -->
-
- 
 
   <style scoped>
 
     p
     {
-      text-align: justify;
+      text-align: justify;                                  
     }
+
+    .offer
+    {
+      /*background-image: url('/wallpapers/moss-wallpaper-8.jpg');*/
+      background-color: rgb(54, 53, 53);
+      transition: transform .2s;
+      color: rgb(255, 255, 255);
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 20px;
+      padding: 20px;
+      transition: transform .2s;
+      font-family: 'Noto Serif SC', sans-serif;
+    }
+
+    .offer:hover
+    {
+      transform: scale(101%);
+    }
+
+    .offerx
+    {
+      background-color: rgba(36, 35, 35, 0.685);
+      transition: transform .2s;
+      border-radius: 20px;
+      padding: 30px;
+    }
+
+    .offerx:hover
+    {
+      transform: scale(101%);
+    }
+
+    .offerheader
+    {
+      font-size: 50px;
+      
+      font-family: 'Rangile', sans-serif;                                       
+    }
+
 
 /* ---- WOOD THEME HEADER ----- */
 .wood
