@@ -48,9 +48,42 @@
         </div>
   </header>
     <router-view />
+
+    <div class="outer footer">
+      <div class="col-sm footerx">
+
+        <div class="row">
+          <div class="col-sm m-1">
+            <div>© 2025, AIR-IUMS. All Rights Reserved</div>
+          </div>
+
+          <div class="col-sm m-1">
+            <div>Terms & Conditions</div>
+          </div>
+
+          <div class="col-sm m-1">
+              <div>Privacy Policy</div>
+          </div>
+
+          <div class="col-sm m-1">
+            <div>Website by RIDDLAND DESIGN</div>
+          </div>
+        </div>
+
+      </div>
+  </div>
 </template>
 
 <style scoped>
+
+.footer
+{
+  font-weight: 400px;
+  font-size: small;
+  border-radius: 20px;
+  color: rgb(54, 53, 53);
+  background-color: rgb(24, 23, 23);
+}
 
 header 
 {

@@ -7,6 +7,11 @@
   /*outline: 1px solid rgb(255, 63, 63);*/
  }
  
+    p
+    {
+      text-align: justify;                                  
+    }
+ 
  body {
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
@@ -81,4 +86,18 @@ h2 {
   @media (min-width: 1200px) {
     font-size: 45px;
   }
+}
+
+.container
+{
+  background-color: rgb(24, 23, 23);
+  border-radius: 20px;
+}
+
+.containerx
+{
+  background-color: rgba(36, 35, 35, 0.685);
+  transition: transform .2s;
+  border-radius: 20px;
+  padding: 30px;
 }

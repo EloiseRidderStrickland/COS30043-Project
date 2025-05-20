@@ -21,6 +21,49 @@
    </div>
   </div>
 
+  <!------ Mini Boxes SET TWO ------>
+
+  <div class="main">
+    <div class="outer">
+      <div class="row">
+          
+
+          <div class="container col-md m-2 p-3">
+            <div class="containerx">
+              <h2>Terrariums</h2><br>
+                <p>
+                  Experience a taste of the natural world wherever you are, with stunning
+                  bio-spheres of thriving green, these minimal maintenance living worlds 
+                  will inspire and brighten any space. 
+                </p>
+            </div>
+          </div>
+  
+          <div class="container col-md m-2 p-3">
+            <div class="containerx">
+              <h2>Aqua-dariums</h2><br>
+                <p>
+                  Immerse yourself in the world of Aquascaping, explore tropical & cold water fish,  
+                  pond scaping, substrates, accessory kits, plants and more to kick start your aquatic journey.
+                </p>
+              </div>
+          </div>     
+          
+          <div class="container col-md m-2 p-3">
+            <div class="containerx">
+              <h2>Ripariums</h2><br>
+                <p>
+                  Add a touch of serenity and calm where rainforest meets sandy shores. 
+                  The perfect combination of both Terrarium and Aqua-darium, 
+                  for the indecisive. 
+                </p>
+              </div>
+          </div> 
+  
+      </div>
+    </div>
+  </div>
+
 <!------ WOOD THEME HEADER ------>
 
   <div class="outer wood">
@@ -46,43 +89,6 @@
 
   <button class="button" style="vertical-align:middle"><span>See The Range</span></button>
 
-  </div>
-
-<!------ Mini Boxes SET TWO ------>
-
-  <div class="main">
-    <div class="outer">
-      <div class="row">
-          
-
-          <div class="container col-md m-2 p-3">
-            <h2>Terrariums</h2><br>
-            <p>
-              Experience a taste of the natural world wherever you are, with stunning
-              bio-spheres of thriving green, these minimal maintenance living worlds 
-              will inspire and brighten any space. 
-            </p>
-          </div>
-  
-          <div class="container col-md m-2 p-3">
-            <h2>Aqua-dariums</h2><br>
-            <p>
-              Immerse yourself in the world of Aquascaping, explore tropical & cold water fish,  
-              pond scaping, substrates, accessory kits, plants amd more to kick start your aquatic journey.
-            </p>
-          </div>     
-          
-          <div class="container col-md m-2 p-3">
-            <h2>Ripariums</h2><br>
-            <p>
-              Add a touch of serenity and calm where rainforest meets sandy shores. 
-              The perfect combination of both Terrarium and Aqua-darium, 
-              for the indecisive. 
-            </p>
-          </div> 
-  
-      </div>
-    </div>
   </div>
 
 <!------ STONE THEME HEADER ------>
@@ -134,21 +140,29 @@
     </div>
   </div>
 
-   <!------ Mini Boxes SET FOUR ------>
+   <!------ FOOTER ------>
 
-   <div class="row outer offer">
-      <div class="col-sm-6 offerx">
-          <div class="offerheader"><h2>Stay In The Loop!</h2></div>
-      <br><p>
-              Want Exclusive offers and deals delivered to your mailbox? 
-              enter your email or become a memeber! 
-              For a limited time get <u>10% off</u> your first purchase!
-            </p>
-      </div>
+   <div class="outer offer">
+    <div class="offerx">
 
-      <div class="col-sm-6 offerx">
-          
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="offerheader"><h2>Stay In The Loop!</h2></div>
+              <br><p>
+                Want Exclusive offers and deals delivered to your mailbox? 
+                enter your email or become a memeber! 
+                For a limited time get <u>10% off</u> your first purchase!
+              </p>
+          </div>
             
+          <div class="col-sm-6">
+            <h2></h2>
+              <form>
+              <input id="email" type="email" placeholder="example@email.com">
+            </form>
+          </div>
+
+        </div>
       </div>
   </div>
   
@@ -162,15 +176,11 @@
 
   <style scoped>
 
-    p
-    {
-      text-align: justify;                                  
-    }
 
     .offer
     {
       /*background-image: url('/wallpapers/moss-wallpaper-8.jpg');*/
-      background-color: rgb(54, 53, 53);
+      background-color: rgba(36, 35, 35, 0.685);
       transition: transform .2s;
       color: rgb(255, 255, 255);
       background-repeat: no-repeat;
@@ -178,7 +188,6 @@
       border-radius: 20px;
       padding: 20px;
       transition: transform .2s;
-      font-family: 'Noto Serif SC', sans-serif;
     }
 
     .offer:hover
@@ -201,9 +210,7 @@
 
     .offerheader
     {
-      font-size: 50px;
-      
-      font-family: 'Rangile', sans-serif;                                       
+      font-family: 'Kindmight', sans-serif;                               
     }
 
 
