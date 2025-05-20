@@ -43,6 +43,9 @@
         </div>
       </div>
     </div>
+
+  <button class="button" style="vertical-align:middle"><span>See The Range</span></button>
+
   </div>
 
 <!------ Mini Boxes SET TWO ------>
@@ -147,14 +150,16 @@
     
   </template>
 
+  <!-- -- HEADER BOX CONTROLS -- -->
+
+ 
+
   <style scoped>
 
     p
     {
       text-align: justify;
     }
-
-    /* -- HEADER BOX CONTROLS -- */
 
 /* ---- WOOD THEME HEADER ----- */
 .wood
@@ -276,5 +281,46 @@
   font-family: 'Southera', sans-serif;
   font-size: 25px;
   text-align: right;
+}
+
+/* -- BUTTON -- */
+
+/* -- BUTTON CONTROLS -- */
+
+.button {
+  background-color: rgba(255, 255, 255, 0);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border: none;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 15px;
+  width: auto;
+  transition: all 0.5s;
+  margin-left: 20px;
+}
+
+.button span {
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\1F850';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-left: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  left: 0;
 }
   </style>

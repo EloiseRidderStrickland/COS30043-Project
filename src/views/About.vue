@@ -14,29 +14,7 @@
       </p>
     </div>
     
-      <div class="row">
-          <div class="box col-sm m-1">
-            <p>Column 1</p>
-          </div>
-
-          <div class="box col-sm m-1">
-            <p>Column 2</p>
-          </div>
-  
-          <div class="box col-sm m-1">
-            <p>Column 3</p>
-          </div>
-
-          <div class="box col-sm m-1">
-            <p>Column 4</p>
-          </div>
-  
-          <div class="box col-sm m-1">
-            <p>Column 5</p>
-          </div>
-      </div>
-  
-
+      
     </div>
   </div>
     
