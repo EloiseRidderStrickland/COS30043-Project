@@ -1,5 +1,56 @@
 <template>
 
+<!--===================================================== MAIN HEADER BAR =====================================================-->
+<header class="outer">
+        <div class="row">
+          <div class="company col-sm-2 mt-3">
+            <div>Air-iums.com</div>
+          </div>
+
+            <div class="col-sm mt-3">
+             <div class="bar-nav">
+              <nav class="bold">
+                <router-link to="/">Home</router-link>
+                <router-link to="/news">News</router-link>
+                <router-link to="/about">About</router-link>
+                <router-link to="/project">Project</router-link>
+              </nav>
+             </div>
+            </div>
+
+          <div class="col-sm-auto mt-3">
+              <input class="search" type="search" placeholder="Search">
+              <router-link to="/login" class="button" style="vertical-align:middle"><span>Login</span></router-link>
+              <router-link to="/register" class="button" style="vertical-align:middle"><span>Sign-In</span></router-link>
+          </div>
+
+          <div class="col-sm-auto mt-3">
+            <a href="https://github.com/EloiseRidderStrickland"><img src="/icons/white-icons/github-white.png" alt="GitHub" width="30"></a>
+            <a href="https://discord.com/"><img src="/icons/white-icons/discord-white.png" alt="Discord" width="30"></a>
+            <a href="https://au.pinterest.com/ers29740/"><img src="/icons/white-icons/pinterest-white.png" alt="Pinterest" width="30"></a>
+          </div>
+        </div>
+
+        <div class="col-12 header-title">
+          <div>
+            <h1>"Build Worlds</h1>
+            <h1>Create Anything."</h1>
+          </div>
+        </div>
+      
+        <div class="col-6 header-subtitle">
+            <p>
+              <em>"From our world to yours, explore our range of handcrafted microworlds 
+              made to order, or choose from hundreds of hand-picked accessories; 
+              substrate, rock, plants, foliage, fish, insects and more! to craft your very own."</em>
+            </p>
+          <div class="sign">
+            ~ Eloise RidderStrickland
+          </div>
+        </div>
+  </header>
+  <!--==================================================== MAIN HEADER BAR END ====================================================-->
+
 <!------ Mini Boxs SET ONE ------>
 
   <div class="main">
@@ -87,7 +138,7 @@
       </div>
     </div>
 
-  <button class="button" style="vertical-align:middle"><span>See The Range</span></button>
+  <button class="expandClick" style="vertical-align:middle"><span>See The Range</span></button>
 
   </div>
 
@@ -140,8 +191,6 @@
     </div>
   </div>
 
-   <!------ FOOTER ------>
-
    <div class="outer offer">
     <div class="offerx">
 
@@ -165,13 +214,35 @@
         </div>
       </div>
   </div>
+
+  <!---==================== FOOTER ====================-->
   
-  <div class="main">
-    <div class="outer">
-          
+  <div class="outer footer">
+    <div class="col-sm footerx">
+        <div class="row">
+
+          <div class="col-sm m-1">
+            <div>© 2025, AIR-IUMS. All Rights Reserved</div>
+          </div>
+
+          <div class="col-sm m-1">
+            <div>Terms & Conditions</div>
+          </div>
+
+          <div class="col-sm m-1">
+              <div>Privacy Policy</div>
+          </div>
+
+          <div class="col-sm m-1">
+            <div>Website by RIDDLAND DESIGN</div>
+          </div>
+
+        </div>
     </div>
   </div>
-    
+
+  <!---==================== FOOTER END ====================-->
+
   </template>
 
   <style scoped>
@@ -336,11 +407,10 @@
   text-align: right;
 }
 
-/* -- BUTTON -- */
 
-/* -- BUTTON CONTROLS -- */
+/* -- .expandClick BUTTON CONTROLS -- */
 
-.button {
+.expandClick {
   background-color: rgba(255, 255, 255, 0);
   color: rgb(255, 255, 255);
   font-weight: bold;
@@ -353,13 +423,13 @@
   margin-left: 20px;
 }
 
-.button span {
+.expandClick span {
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-.button span:after {
+.expandClick span:after {
   content: '\1F850';
   position: absolute;
   opacity: 0;
@@ -368,12 +438,15 @@
   transition: 0.5s;
 }
 
-.button:hover span {
+.expandClick:hover span {
   padding-left: 25px;
 }
 
-.button:hover span:after {
+.expandClick:hover span:after {
   opacity: 1;
   left: 0;
 }
+
+/* -- END -- */
+
   </style>

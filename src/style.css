@@ -4,7 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   outline: none;
-  /*outline: 1px solid rgb(255, 63, 63);*/
+  outline: 1px solid rgb(255, 63, 63);
  }
  
     p
@@ -100,4 +100,142 @@ h2 {
   transition: transform .2s;
   border-radius: 20px;
   padding: 30px;
+}
+
+/* -- FOOTER -- */
+
+.footer
+{
+  font-weight: 400px;
+  font-size: small;
+  border-radius: 20px;
+  color: rgb(54, 53, 53);
+  background-color: rgb(24, 23, 23);
+}
+
+/* -- MAIN HEADER SETTINGS -- */
+
+header 
+{
+  background-image: url('/wallpapers/reverse-cave-wallpaper-1.jpg');
+  background-color: rgb(88, 107, 87);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  padding: 20px;
+  transition: transform .2s;
+}
+
+header:hover
+{
+  transform: scale(101%);
+}
+
+.header-title
+{
+  padding-top: 95px;
+  padding-left: 80px;
+  text-align: left;
+  font-family: 'Kindmight', sans-serif;
+}
+
+.header-subtitle
+{
+  justify-content: space-between; 
+  padding-top: 10px;
+  padding-bottom: 110px;
+  padding-left: 80px;
+  text-align: justify;
+}
+
+.sign 
+{
+  font-family: 'Southera', sans-serif;
+  font-size: 25px;
+  text-align: left;
+}
+
+.company
+{
+  font-family: 'Kindmight', sans-serif;
+}
+
+.bar-nav nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white; 
+  transition: transform .2s;
+}
+
+nav:hover
+{
+  transform: scale(101%);
+}
+
+img {
+  margin-left: 15px;
+}
+
+/* -- SEARCH AREA -- */
+
+.search
+{
+  background-color: rgba(0, 0, 0, 0.4);
+  font-weight: 1em;
+  border: none;
+  text-indent: 10px;
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.search::placeholder {
+  color: rgb(255, 255, 255);
+}
+
+input, select, search{
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+search:focus, input:focus {
+    color: rgb(255, 255, 255);
+    border-radius: 5px 5px 0px 0px;
+}
+
+/* -- BUTTON CONTROLS -- */
+
+.button {
+  background-color: rgba(255, 255, 255, 0);
+  color: rgb(255, 255, 255);
+  border: none;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 15px;
+  width: auto;
+  transition: all 0.5s;
+  margin-left: 20px;
+}
+
+.button span {
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\1F852';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
