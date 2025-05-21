@@ -4,8 +4,17 @@
   padding: 0;
   box-sizing: border-box;
   outline: none;
-  outline: 1px solid rgb(255, 63, 63);
+  /*outline: 1px solid rgb(255, 63, 63);*/
+
+  opacity: 0;
+  animation: fadeIn 0.2s forwards;
  }
+  @keyframes fadeIn 
+  {
+    to {
+        opacity: 1;
+       }
+  }
  
     p
     {
@@ -137,7 +146,15 @@ header:hover
   padding-left: 80px;
   text-align: left;
   font-family: 'Kindmight', sans-serif;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
 }
+  @keyframes fadeIn 
+  {
+    to {
+        opacity: 1;
+       }
+  }
 
 .header-subtitle
 {
@@ -146,7 +163,15 @@ header:hover
   padding-bottom: 110px;
   padding-left: 80px;
   text-align: justify;
+  opacity: 0;
+  animation: fadeIn 3s forwards;
 }
+  @keyframes fadeIn 
+  {
+    to {
+        opacity: 2;
+       }
+  }
 
 .sign 
 {

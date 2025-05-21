@@ -21,7 +21,7 @@
           <div class="col-sm-auto mt-3">
               <input class="search" type="search" placeholder="Search">
               <router-link to="/login" class="button" style="vertical-align:middle"><span>Login</span></router-link>
-              <router-link to="/register" class="button" style="vertical-align:middle"><span>Sign-In</span></router-link>
+              <router-link to="/register" class="button" style="vertical-align:middle"><span>Sign-Up</span></router-link>
           </div>
 
           <div class="col-sm-auto mt-3">
@@ -194,6 +194,7 @@
    <div class="outer offer">
     <div class="offerx">
 
+<!-- -- MINI BOX FOUR -->
         <div class="row">
           <div class="col-sm-6">
             <div class="offerheader"><h2>Stay In The Loop!</h2></div>
