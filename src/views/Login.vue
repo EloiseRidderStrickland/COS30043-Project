@@ -1,3 +1,4 @@
+
 <template>
   <div class="outer main" :class="selectPlace">
 
@@ -21,6 +22,7 @@
     
 <!------ FORM ------>
     <div class="col-sm body">
+     <div class="row">
       <div>
         <label for="fname">Your email </label>
         <input type="text" id="fname" v-model="username" placeholder="e.g example@mail.com" name="First Name" required>
@@ -30,9 +32,9 @@
         <label for="lname">Your password </label>
         <input type="password" id="lname" v-model="password" placeholder="e.g ilooveAiriums123" name="Last Name" required>
       </div>
-    </div>
+     </div>
 
-    <div class="row route">
+     <div class="row route">
           <div class="col-sm">
             <em>Forgot Password</em>
           </div>
@@ -41,49 +43,69 @@
             <router-link to="/register"><em>Don't Have An Account?</em></router-link>
           </div>
       </div>
+    </div>
+
+    
 
 <!------ THEME SELECT ------>
 
     <div>
       <h3>Choose Your Theme</h3>
       <div class="row themerow">
-        <div class="col-sm-2 box box1">
-          <input type="radio" id="ocean" class="radio_item" name="ocean" value="ocean" v-model='selectPlace' checked>
-          <label for="ocean">Ocean</label>
+        <div class="col-sm-auto theme-option">
+          <input type="radio" id="ocean" class="radio_item" name="theme" value="ocean" v-model='selectPlace' checked>
+          <label for="ocean" class="box box1">
+            <span class="theme-label">Ocean</span>
+          </label>
         </div>
 
-        <div class="col-sm-2 box box2">
-          <input type="radio" id="mountain" class="radio_item" name="mountain" value="mountain" v-model="selectPlace">
-          <label for="mountain">Mountains</label> 
+        <div class="col-sm-auto theme-option">
+          <input type="radio" id="mountain" class="radio_item" name="theme" value="mountain" v-model="selectPlace">
+          <label for="mountain" class="box box2">
+            <span class="theme-label">Mountains</span>
+          </label> 
         </div>
 
-        <div class="col-sm-2 box box3">
-          <input type="radio" id="forest" class="radio_item" name="forest" value="forest" v-model="selectPlace">
-          <label for="mountain">Forest</label> 
+        <div class="col-sm-auto theme-option">
+          <input type="radio" id="forest" class="radio_item" name="theme" value="forest" v-model="selectPlace">
+          <label for="forest" class="box box3">
+            <span class="theme-label">Forest</span>
+          </label> 
         </div>
         
-        <div class="col-sm-2 box box4">
-          <input type="radio" id="moss" class="radio_item" name="" value="moss" v-model="selectPlace">
-          <label for="mountain">Moss</label>
+        <div class="col-sm-auto theme-option">
+          <input type="radio" id="moss" class="radio_item" name="theme" value="moss" v-model="selectPlace">
+          <label for="moss" class="box box4">
+            <span class="theme-label">Moss</span>
+          </label>
         </div>
-        <div class="col-sm-2 box box5">
-          <input type="radio" id="leaves" class="radio_item" name="leaves" value="leaves" v-model="selectPlace">
-          <label for="mountain">Leaves</label>
-        </div>
-
-        <div class="col-sm-2 box box6">
-          <input type="radio" id="cave" class="radio_item" name="cave" value="cave" v-model="selectPlace">
-          <label for="cave">Cave</label>
-        </div>
-
-        <div class="col-sm-2 box box7">
-          <input type="radio" id="desert" class="radio_item" name="desert" value="desert" v-model="selectPlace">
-          <label for="cave">Desert</label>
+        
+        <div class="col-sm-auto theme-option">
+          <input type="radio" id="leaves" class="radio_item" name="theme" value="leaves" v-model="selectPlace">
+          <label for="leaves" class="box box5">
+            <span class="theme-label">Leaves</span>
+          </label>
         </div>
 
-        <div class="col-sm-2 box box8">
-          <input type="radio" id="clouds" class="radio_item" name="clouds" value="clouds" v-model="selectPlace">
-          <label for="clouds">Clouds</label>
+        <div class="col-sm-auto theme-option">
+          <input type="radio" id="cave" class="radio_item" name="theme" value="cave" v-model="selectPlace">
+          <label for="cave" class="box box6">
+            <span class="theme-label">Cave</span>
+          </label>
+        </div>
+
+        <div class="col-sm-auto theme-option">
+          <input type="radio" id="desert" class="radio_item" name="theme" value="desert" v-model="selectPlace">
+          <label for="desert" class="box box7">
+            <span class="theme-label">Desert</span>
+          </label>
+        </div>
+
+        <div class="col-sm-auto theme-option">
+          <input type="radio" id="clouds" class="radio_item" name="theme" value="clouds" v-model="selectPlace">
+          <label for="clouds" class="box box8">
+            <span class="theme-label">Clouds</span>
+          </label>
         </div>
 
       </div>
@@ -134,6 +156,54 @@ h3
   font-family: 'Kindmight', sans-serif;
   padding: 20px;
 } 
+
+.radio_item {
+  display: none;
+}
+
+.theme-option {
+  position: relative;
+}
+
+.theme-option label {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-label {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  min-width: 60px;
+}
+
+.radio_item:checked + label {
+  transform: scale(1.05);
+  box-shadow: 0 0 0 3px #ffffff, 0 0 0 6px rgba(255, 255, 255, 0.3);
+  border: 2px solid #ffffff;
+}
+
+.theme-option label:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.radio_item:checked + label:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 0 3px #ffffff, 0 0 0 6px rgba(255, 255, 255, 0.3);
+}
 
 .box1 
 {
@@ -187,21 +257,23 @@ h3
     background-size: cover;
   }
 
-  .box:hover
-  {
-    transform: scale(102%);
-  }
-
 .main {
+  width: calc(100vw - 40px);
+  height: calc(100vh - 40px);
+  margin: 20px;
   background-color: rgb(88, 107, 87);
   border-radius: 20px;
-  min-height: 400px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   transition: background-image 0.3s ease;
   padding: 50px;
-  }
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
 
 .ocean {
   background-image: url('/assets/ocean.png');
@@ -243,9 +315,9 @@ h3
 
 .body 
 {
+  padding-left: 50px;
+  padding-right: 50px;
   border-radius: 20px;
-  align-items: center;
-  
   display: inline-block;
   opacity: 0;
   animation: fadeIn 1s forwards;
@@ -263,7 +335,6 @@ h3
   transform: scale(101%);
 }
 
-/* Add some styling to make form elements more visible on background */
 label, input {
   margin: 8px 0;
 }
@@ -294,10 +365,5 @@ h2
   font-family: 'Kindmight', sans-serif;
   padding: 30px;
 }
-
-/*.radio_item 
-{
-  display: none !important;
-}*/
 
 </style>
