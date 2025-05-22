@@ -24,93 +24,108 @@
     <div class="col-sm body">
       <form>
       
+<!------ FULL NAME ------>
     <div>
       <div class="row">
         <h4>Full Name *</h4>
         <div class="col-sm-6">
             <label for="fname">First Name</label>
-            <input type="text" id="fname" v-model="fname" placeholder="John" name="First Name" required>
+            <input type="text" id="fname" v-model="fname" placeholder="Name" name="First Name" required>
           </div>
           <div class="col-sm-6">
             <label for="lname">Last Name</label>
-            <input type="text" id="lname" v-model="lname" placeholder="Doe" name="Last Name" required>
+            <input type="text" id="lname" v-model="lname" placeholder="Surname" name="Last Name" required>
           </div>
       </div>
     </div>
 
+<!------ USERNAME / MOBILE NUMBER ------>
     <div>
       <div class="row">
         <div class="col-sm-6">
-          <label for="email">Email:</label>
-          <input type="email" id="email" v-model="email" placeholder="jdoe@mail.com" name="Email" required>
+          <label for="uname">Username</label>
+          <input type="text" id="uname" v-model="uname" placeholder="Username" name="Username" required>
         </div>
         <div class="col-sm-6">
-          <label for="mnumber">Mobile Number:</label>
+          <label for="mnumber">Mobile Number</label>
           <input type="text" id="mnumber" v-model="mnumber" placeholder="+61 04" name="Mobile Number" required>
         </div>
       </div>
     </div>
 
+<!------ PASSWORD / CONFIRM ------>
     <div>
       <div class="row">
         <div class="col-sm-6">
-          <label for="password">Password:</label>
-          <input type="password" id="password" v-model="password" placeholder="Min 8 characters ($%^&*#)" name="Password" required>
+          <label for="password">Password</label>
+          <input type="password" id="password" v-model="password" placeholder="Password" name="Password" required>
         </div>
         <div class="col-sm-6">
-          <label for="confirmPassword">Re-Enter Password:</label>
-          <input type="password" id="confirmPassword" v-model="confirmPassword" placeholder="Must Match" name="Confirm Password" required>
+          <label for="confirmPassword">Re-Enter Password</label>
+          <input type="password" id="confirmPassword" v-model="confirmPassword" placeholder="Re-Enter Password" name="Confirm Password" required>
           <span v-if="confirmPassword && password !== confirmPassword" class="text-danger">
             Passwords do not match
           </span>
         </div>
         <div class="col-sm-12">
-          <label for="uname">Username:</label>
-          <input type="text" id="uname" v-model="uname" placeholder="John123" name="Username" required>
+          <label for="email">Email</label>
+          <input type="email" id="email" v-model="email" placeholder="example@mail.com" name="Email" required>
         </div>
       </div>
     </div>
+
+<!------ ADDRESS DETAILS ------>
 
     <div>
       <div class="row">
           <h4>Address *</h4>
           <div class="col-sm-12">
-            <label for="lname">Street Address</label>
-            <input type="text" id="lname" v-model="lname" placeholder="Doe" name="Last Name" required>
+            <label for="address">Street Address</label>
+            <input type="text" id="address" v-model="address" placeholder="Street Address" name="Address" required>
           </div>
           <div class="col-sm-6">
-            <label for="lname">Suburb</label>
-            <input type="text" id="lname" v-model="lname" placeholder="Doe" name="Last Name" required>
+            <label for="suburb">Suburb</label>
+            <input type="text" id="suburb" v-model="suburb" placeholder="Suburbs" name="Suburb" required>
           </div>
+
           <div class="col-sm-6">
-            <label for="lname">State / Territory</label>
-            <input type="text" id="lname" v-model="lname" placeholder="Doe" name="Last Name" required>
+            <label for="state">State / Territory</label>
+            <select id="state" v-model="state" name="State" required>
+              <option value="" disabled selected>Select State</option>
+              <option value="vic">Victoria</option>
+              <option value="nsw">New South Wales</option>
+              <option value="qld">Queensland</option>
+              <option value="wa">Western Australia</option>
+              <option value="sa">South Australia</option>
+              <option value="nt">Northen Territory</option>
+              <option value="tm">Tasmania</option>
+            </select>
           </div>
+
           <div class="col-sm-12">
-            <label for="lname">Potal / Zip Code</label>
-            <input type="text" id="lname" v-model="lname" placeholder="Doe" name="Last Name" required>
+            <label for="postcode">Postal / Zip Code</label>
+            <input type="text" id="poscode" v-model="postcode" placeholder="Postal / Zip Code" name="Postcode" required>
           </div>
         </div>
     </div>
-        
-        
+    <!--<input type="checkbox" id="showterms" name="showterms" value="Terms">-->
+    
+        <button type="button" class="button" @click="toggleTerms">Terms & Conditions</button>
+        <div v-if="showTerms" class="terms-popup">
 
-        <div v-if="showTerms" class="terms-popup bg-light p-3 border rounded mt-2">
+          <p>By using this service, you agree to the use of all data supplied in this form being processed 
+          in accordance with privacy police (AU) by Air-iums.com, for the purpose of puchasing and/or subscribing, direct, or indirect affiliates of Air-iums.com. 
+          By submitting this information, you acknowledge that all provided information is correct and true in accordance with law</p>
 
-        <p>By using this service, you agree to the use of all data supplied in this form being processed 
-        in accordance with privacy police (AU) by Insight Hire.inc, for the purpose of gaining 
-        employment by, direct, or indirect affiliates of Insight Hire.inc. By submitting this information, 
-        you acknowledge that all provided information is correct and true in accordance with law</p>
+          <p>Insight Hire.inc are can not be held accountable or liable for any direct, indirect, incidental, 
+          special, or consequential damages arising out of or in connection with your use of the service.</p> 
 
-        <p>Insight Hire.inc are can not be held accountable or liable for any direct, indirect, incidental, 
-        special, or consequential damages arising out of or in connection with your use of the service.</p> 
+          <p>By clicking 'Accept', you acknowledge that you have read and understand 
+          the terms and conditions outlined above.</p>
 
-        <p>By clicking 'Accept', you acknowledge that you have read and understand 
-        the terms and conditions outlined above.</p>
-
-        <button type="button" class="accept" @click="acceptTerms">Accept</button>
+          <button type="button" class="buttonx" @click="acceptTerms">Accept</button>
         </div>
-
+          <button type="submit" class="register">Register</button>
     </form>
   </div>
     
@@ -124,16 +139,15 @@ export default {
     return {
       fname: '',
       lname: '',
-      dob: '',
       uname: '',
       password: '',
       confirmPassword: '',
       email: '',
       address: '',
       suburb: '',
+      state: '',
       postcode: '',
       mnumber: '',
-      jobCategory: '',
       termsAccepted: false,
       showTerms: false,
     };
@@ -283,6 +297,50 @@ export default {
 </script>
 
 <style scoped>
+
+select
+{
+  color: black;
+  width: 100%;
+  margin-top: 6px;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.buttonx {
+  background: rgba(255, 255, 255, 0.3);
+  color: rgb(255, 255, 255);
+  transition: all 0.5s;
+  border-radius: 20px;
+  text-align: center;
+  margin-right: 20px;
+  font-weight: 15px;
+  padding: 5px 15px;
+  border: none;
+  width: auto;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.register {
+  background: rgba(215, 56, 56, 0.3);
+  color: rgb(255, 255, 255);
+  transition: all 0.5s;
+  border-radius: 20px;
+  text-align: center;
+  margin-right: 20px;
+  font-weight: 15px;
+  padding: 5px 15px;
+  border: none;
+  width: 100%;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.register:hover
+{
+  transform: scale(102%);
+}
 
 .containerxy
 {

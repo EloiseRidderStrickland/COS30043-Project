@@ -45,6 +45,8 @@
       </div>
     </div>
 
+    <button type="submit" class="login">Log-In</button>
+
     
 
 <!------ THEME SELECT ------>
@@ -132,6 +134,26 @@ export default {
 </script>
 
 <style scoped>
+
+.login {
+  background: rgba(255, 255, 255, 0.4);
+  color: rgb(255, 255, 255);
+  transition: all 0.5s;
+  border-radius: 20px;
+  text-align: center;
+  margin-right: 20px;
+  font-weight: 15px;
+  padding: 5px 15px;
+  border: none;
+  width: 100%;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.login:hover
+{
+  transform: scale(102%);
+}
 
 .themerow {
   display: flex;
