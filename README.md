@@ -57,3 +57,7 @@ Website Design Inspirations: https://land-book.com/
 Free Fonts: https://www.cdnfonts.com/
 
 Free Stock Images: https://www.pexels.com/
+
+Aquarium Wood Infomation: 
+1. https://zenaquaria.com/best-driftwood-for-aquariums/
+2. https://injaf.org/articles-guides/general-guides/guide-to-aquarium-wood/ 
