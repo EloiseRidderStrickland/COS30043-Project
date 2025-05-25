@@ -113,12 +113,12 @@
   h1
   {
     font-family: 'Kindmight', sans-serif;
-    font-size: 40px;
+    font-size: 30px;
   }
 
   .main
   {
-    background-image: url('/collage/terra-3.jpg');
+    background-image: url('/collage/terra-6.jpg');
     position: relative;
     background-position: center;
     background-size: cover;
@@ -136,7 +136,7 @@
   td
   {
     text-align: left;
-    font-size: 20px;
+    font-size: 15px;
     padding-right: 50px;
     padding-bottom: 10px;
     color: rgb(255, 255, 255);
@@ -146,15 +146,15 @@
   {
     text-align: left;
     padding-bottom: 10px;
-    font-size: 20px;
-    color: rgb(80, 95, 205);
+    font-size: 17px;
+    color: rgb(255, 255, 255);
   }
 
   .pagbox
   {
     padding: 20px;;
     border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.4);  
+    background-color: rgba(0, 0, 0, 0.6);  
     color: rgb(255, 255, 255);
   }
 

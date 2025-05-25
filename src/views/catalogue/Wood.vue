@@ -40,7 +40,7 @@
       <div class="row">
         
       <div class="col-sm-4 theme-option">
-        <router-link to="/cholla-details" class="card-link mb-3">
+        <router-link to="/extra" class="card-link mb-3">
           <label for="wood" class="box box1">
             <span class="theme-label">Cholla wood</span>
             <span class="theme-labelx">From $25.99</span>
@@ -56,7 +56,7 @@
       </div>  
 
       <div class="col-sm-4 theme-option">
-        <router-link to="/malaysian-details" class="card-link mb-3">
+        <router-link to="/extra" class="card-link mb-3">
           <label for="wood" class="box box2">
             <span class="theme-label">Malaysian Driftwood</span>
             <span class="theme-labelx">From $35.99</span>
@@ -72,7 +72,7 @@
       </div> 
 
       <div class="col-sm-4 theme-option">
-        <router-link to="/manzanite-details" class="card-link mb-3">
+        <router-link to="/extra" class="card-link mb-3">
           <label for="wood" class="box box3">
             <span class="theme-label">Manzanita Wood</span>
             <span class="theme-labelx">From $45.99</span>
@@ -87,7 +87,7 @@
       </div> 
 
       <div class="col-sm-4 theme-option">
-        <router-link to="/mopani-details" class="card-link mb-3">
+        <router-link to="/extra" class="card-link mb-3">
           <label for="wood" class="box box4">
             <span class="theme-label">Mopani wood</span>
             <span class="theme-labelx">From $55.99</span>
@@ -102,7 +102,7 @@
       </div> 
 
       <div class="col-sm-4 theme-option">
-        <router-link to="/spiderwood-details" class="card-link mb-3">
+        <router-link to="/extra" class="card-link mb-3">
           <label for="wood" class="box box5">
             <span class="theme-label">Spiderwood Branches</span>
             <span class="theme-labelx">From $15.99</span>
@@ -116,7 +116,7 @@
       </div> 
       
       <div class="col-sm-4 theme-option">
-        <router-link to="/pacific-details" class="card-link mb-3">
+        <router-link to="/extra" class="card-link mb-3">
           <label for="wood" class="box box6">
             <span class="theme-label">Pacific Driftwood</span>
             <span class="theme-labelx">From $20.99</span>
@@ -131,7 +131,7 @@
       </div>
 
       <div class="col-sm-4 theme-option">
-        <router-link to="/coastal-details" class="card-link mb-3">
+        <router-link to="/extra" class="card-link mb-3">
           <label for="wood" class="box box7">
             <span class="theme-label">Coastal Redwoods</span>
             <span class="theme-labelx">From $110.99</span>
@@ -147,7 +147,7 @@
       </div>
         
       <div class="col-sm-4 theme-option">
-        <router-link to="/coastal-details" class="card-link mb-3">
+        <router-link to="/extra" class="card-link mb-3">
           <label for="wood" class="box box8">
             <span class="theme-label">Tigerwood</span>
             <span class="theme-labelx">From $75.99</span>
@@ -162,7 +162,7 @@
       </div>
       
       <div class="col-sm-4 theme-option">
-        <router-link to="/bogwood-details" class="card-link mb-3">
+        <router-link to="/extra" class="card-link mb-3">
           <label for="wood" class="box box9">
             <span class="theme-label">Bogwood</span>
             <span class="theme-labelx">From $25.99</span>

@@ -9,18 +9,27 @@ import Project from '../views/Project.vue'
 // Login / Register
 import Login from '../views/Login.vue'
 import Register from '../views/Register.vue'
+import Confirmation from '../views/Confirmation.vue'
+
+import Extra from '../views/catalogue/Extra.vue'
 
 const routes = [
-    { path: '/', component: Home },
-    { path: '/news', component: News },
-    { path: '/about', component: About },
-    { path: '/project', component: Project},
-    { path: '/login', component: Login},
-    { path: '/register', component: Register},
-
+  { path: '/', name: 'home', component: Home },
+  { path: '/news', name: 'news', component: News },
+  { path: '/about', name: 'about', component: About },
+  { path: '/project', name: 'project', component: Project},
+  { path: '/login', name: 'login', component: Login},
+  { path: '/register', name: 'register', component: Register},
+  { path: '/confirmation', name: 'confirmation', component: Confirmation},
+  { path: '/extra', name: 'extra', component: Extra},
 ]
+
 const router = createRouter ({
     history: createWebHistory(),
     routes,
 })
+// const router = createRouter ({
+//     history: createWebHistory('/cos30043/s104934718/Project/'),
+//     routes,
+// })
 export default router

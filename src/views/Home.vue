@@ -153,27 +153,42 @@
 
   <div class="outer offer">
     <div class="offerx">
-
-<!-- -- MINI BOX FOUR -->
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="offerheader"><h2>Stay In The Loop!</h2></div>
-              <br><p>
-                Want Exclusive offers and deals delivered to your mailbox? 
-                enter your email or become a memeber! 
-                For a limited time get <u>10% off</u> your first purchase!
-              </p>
+      <!-- MINI BOX FOUR -->
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="offerheader"><h2>Stay In The Loop!</h2></div>
+          <br><p>
+            <em>Want Exclusive offers and deals delivered to your mailbox? 
+            enter your email or become a member! 
+            For a limited time get <u>10% off</u> your first purchase!</em>
+          </p>
+        </div>
+        
+        <div class="col-sm-6">
+          <h2></h2>
+          <!-- Show form if not submitted -->
+          <form v-if="!showThanks" @submit.prevent="submitEmail">
+            <input 
+              id="email" 
+              type="email" 
+              placeholder="example@email.com"
+              v-model="email"
+              required
+              class="email-input">
+            <br><br>
+            <button type="submit" class="buttonEx"><strong>Subscribe</strong></button>
+          </form>
+          
+          <!-- Show thank you message after submission -->
+          <div v-if="showThanks" class="thank-you-message">
+            <h3>Thank You!</h3>
+            <p>We've received your email <strong><u>{{ submittedEmail }}!</u></strong></p>
+            <p>Cash back, Discounts and More heading your way!</p>
+            <button @click="resetForm" class="buttonEX">Exit</button>
           </div>
-            
-          <div class="col-sm-6">
-            <h2></h2>
-              <form>
-              <input id="email" type="email" placeholder="example@email.com">
-            </form>
-          </div>
-
         </div>
       </div>
+    </div>
   </div>
 
   <!---==================== FOOTER ====================-->
@@ -206,23 +221,74 @@
 
   </template>
 
-  <script>
-  import Wood from './catalogue/Wood.vue'
-  import Rock from './catalogue/Rock.vue'
-  import Moss from './catalogue/Moss.vue'
+<script>
+import Wood from './catalogue/Wood.vue'
+import Rock from './catalogue/Rock.vue'
+import Moss from './catalogue/Moss.vue'
 
-    export default {
+export default {
+  data() {
+    return {
       name: 'Home',
-      components: {
+      email: '',
+      showThanks: false,
+      submittedEmail: ''
+    }
+  },
+  components: {
         Wood,
         Rock,
         Moss
+      },
+  methods: {
+    submitEmail() {
+      if (this.email) {
+        this.submittedEmail = this.email;
+        this.showThanks = true;
+        this.email = ''; // Clear the input
       }
+    },
+    resetForm() {
+      this.showThanks = false;
+      this.submittedEmail = '';
+      this.email = '';
     }
+  }
+}
 </script>
 
 
-  <style>
+<style>
+
+.email-input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 20px;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.email-input:focus {
+  outline: none;
+  border-color: #ffffff;
+}
+
+.thank-you-message {
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+  background: rgba(30, 30, 30, 0.5);
+  border-radius: 20px;
+}
+
+.thank-you-message p {
+  text-align: center;
+}
+
+.thank-you-message h3 {
+  color: rgb(255, 255, 255);
+  margin-bottom: 10px;
+}
 
   .divider
 {
@@ -364,13 +430,24 @@
 .offer
 {
   /*background-image: url('/wallpapers/moss-wallpaper-8.jpg');*/
-  background-color: rgba(36, 35, 35, 0.685);
+  background: rgba(54, 54, 54, 0.2);
   color: rgb(255, 255, 255);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 20px;
   padding: 20px;
   transition: transform .2s;
+  background-image: url('/collage/terra-10.jpg');
+}
+
+.buttonEx {
+  background-color: rgba(255, 255, 255, 0);
+  color: rgb(255, 255, 255);
+  border: none;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 15px;
+  width: auto;
 }
 
 .offer:hover
@@ -380,10 +457,11 @@
 
 .offerx
 {
-  background-color: rgba(36, 35, 35, 0.685);
+  background: rgba(30, 30, 30, 0.4);
   transition: transform .2s;
   border-radius: 20px;
   padding: 30px;
+  backdrop-filter: blur(4px);
 }
 
 .offerx:hover
@@ -394,6 +472,11 @@
 .offerheader
 {
   font-family: 'Kindmight', sans-serif;                               
+}
+
+.offerx p 
+{
+  text-align: left;
 }
 
 /* -- END MAIN -- */

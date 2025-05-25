@@ -2,13 +2,12 @@
 <template>
   <div class="outer main" :class="selectPlace">
 
-        <div class="col-1 route">
-            <router-link to="/"><strong>Back</strong></router-link>
-        </div>
-
     <div class="containerxy">
 
 <!------ NAVIGATION ------>
+        <div class="col-1 route">
+            <router-link to="/"><strong>Back</strong></router-link>
+        </div>
 
         <div class="company col-sm mt-3">
           <div>Air-iums.com</div>
@@ -21,7 +20,8 @@
       </div>
     
 <!------ FORM ------>
-    <div class="col-sm body">
+<form>
+    <div class="col-sm outer body">
      <div class="row">
       <div>
         <label for="fname">Your email </label>
@@ -43,11 +43,9 @@
             <router-link to="/register"><em>Don't Have An Account?</em></router-link>
           </div>
       </div>
+      <button type="submit" class="login">Log-In</button>
     </div>
-
-    <button type="submit" class="login">Log-In</button>
-
-    
+</form>
 
 <!------ THEME SELECT ------>
 
@@ -57,56 +55,49 @@
         <div class="col-sm-auto theme-option">
           <input type="radio" id="ocean" class="radio_item" name="theme" value="ocean" v-model='selectPlace' checked>
           <label for="ocean" class="box box1">
-            <span class="theme-label">Ocean</span>
           </label>
         </div>
 
         <div class="col-sm-auto theme-option">
           <input type="radio" id="mountain" class="radio_item" name="theme" value="mountain" v-model="selectPlace">
           <label for="mountain" class="box box2">
-            <span class="theme-label">Mountains</span>
           </label> 
         </div>
 
         <div class="col-sm-auto theme-option">
           <input type="radio" id="forest" class="radio_item" name="theme" value="forest" v-model="selectPlace">
           <label for="forest" class="box box3">
-            <span class="theme-label">Forest</span>
           </label> 
         </div>
         
         <div class="col-sm-auto theme-option">
           <input type="radio" id="moss" class="radio_item" name="theme" value="moss" v-model="selectPlace">
           <label for="moss" class="box box4">
-            <span class="theme-label">Moss</span>
           </label>
         </div>
         
         <div class="col-sm-auto theme-option">
           <input type="radio" id="leaves" class="radio_item" name="theme" value="leaves" v-model="selectPlace">
           <label for="leaves" class="box box5">
-            <span class="theme-label">Leaves</span>
           </label>
         </div>
 
         <div class="col-sm-auto theme-option">
           <input type="radio" id="cave" class="radio_item" name="theme" value="cave" v-model="selectPlace">
           <label for="cave" class="box box6">
-            <span class="theme-label">Cave</span>
           </label>
         </div>
 
         <div class="col-sm-auto theme-option">
           <input type="radio" id="desert" class="radio_item" name="theme" value="desert" v-model="selectPlace">
           <label for="desert" class="box box7">
-            <span class="theme-label">Desert</span>
+            
           </label>
         </div>
 
         <div class="col-sm-auto theme-option">
           <input type="radio" id="clouds" class="radio_item" name="theme" value="clouds" v-model="selectPlace">
           <label for="clouds" class="box box8">
-            <span class="theme-label">Clouds</span>
           </label>
         </div>
 
@@ -137,7 +128,7 @@ export default {
 <style scoped>
 
 .login {
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.5);
   color: rgb(255, 255, 255);
   transition: all 0.5s;
   border-radius: 20px;
@@ -172,10 +163,11 @@ input {
 {
   display: inline-block;
   backdrop-filter: blur(4px);
-  background-color: rgba(36, 35, 35, 0.3);
+  background-color: rgba(36, 35, 35, 0.4);
   transition: transform .2s;
   border-radius: 20px;
   padding: 30px;
+  max-width: 600px;
 }
   
 h3 
@@ -198,19 +190,6 @@ h3
   transition: all 0.2s ease;
   position: relative;
   overflow: hidden;
-}
-
-.theme-label {
-  position: absolute;
-  bottom: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 4px 8px;
-  font-size: 12px;
-  font-weight: bold;
-  text-align: center;
 }
 
 .radio_item:checked + label 
@@ -285,8 +264,6 @@ h3
   }
 
 .main {
-  width: calc(100vw - 40px);
-  height: calc(100vh - 40px);
   margin: 20px;
   background-color: rgb(88, 107, 87);
   border-radius: 20px;
@@ -349,6 +326,7 @@ h3
   opacity: 0;
   animation: fadeIn 1s forwards;
   transition: transform .2s;
+  max-width: 500px;
 }
   @keyframes fadeIn 
   {

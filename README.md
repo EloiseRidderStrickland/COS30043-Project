@@ -61,3 +61,20 @@ Free Stock Images: https://www.pexels.com/
 Aquarium Wood Infomation: 
 1. https://zenaquaria.com/best-driftwood-for-aquariums/
 2. https://injaf.org/articles-guides/general-guides/guide-to-aquarium-wood/ 
+
+# Deployment Instructions
+
+1. Change vite.config.js:
+        export default defineConfig({
+            plugins: [vue()],
+  Add -->   base: "/cos30043/s104934718/Project"
+        })
+
+2. Change Router:
+    const router = createRouter ({
+  Add --> history: createWebHistory('/cos30043/s104934718/Project/'),
+          routes,
+    })
+
+3. Run: npm run build --base/cos30043/s104934718/Project/ 
+4. Deploy To Directory.

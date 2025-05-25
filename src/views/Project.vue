@@ -31,19 +31,24 @@
   </header>
   <!--==================================================== HEADER BAR END ====================================================-->
 
-  <div class="main">
-   <div class="main-body p-3 mt-5">
-    <div class="col-12 p-3">
-      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
-        deserunt mollit anim id est laborum."
-      </p>
-     </div>
-    </div>
-  </div>
+    <div class="outer main">
+        <div class="col-md-6 containerxy">
+
+            <div class="company col-sm mt-3">
+                <div>Air-iums.com</div>
+            </div>
+             <div class="mt-4">
+                <h3>Want To See More About This Project?</h3>
+                <span>
+                  See the full Git Repository Here!
+                </span>
+
+                  <div class="col-sm-auto mt-4">
+                    <a href="https://github.com/EloiseRidderStrickland"><img src="/icons/white-icons/github-white.png" alt="GitHub" width="60"></a>
+                  </div>               
+                </div>
+              </div>
+            </div>
 
   <!---==================== FOOTER ====================-->
   
@@ -89,5 +94,68 @@
     {
       font-family: 'Kindmight', sans-serif;
     }
+
+    .containerxy
+{
+  display: inline-block;
+  backdrop-filter: blur(4px);
+  background-color: rgba(36, 35, 35, 0.4);
+  transition: transform .2s;
+  border-radius: 20px;
+  padding: 30px;
+  transition: transform .2s;
+}
+@keyframes fadeIn 
+  {
+    to {
+        opacity: 1;
+       }
+  }
+
+.containerxy:hover
+{
+  transform: scale(101%);
+}
+  
+h3 
+{
+  font-family: 'Kindmight', sans-serif;
+  padding: 20px;
+} 
+
+  .box
+  {
+    font-weight: bold;
+    margin: 2px;
+    border-radius: 10px;
+    min-height: 90px;
+    min-width: 100px;
+    display: inline-block;
+    background-position: center;
+    background-size: cover;
+  }
+
+.main {
+  margin: 20px;
+  background-color: rgb(88, 107, 87);
+  border-radius: 20px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-image 0.3s ease;
+  padding: 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: url('collage/terra-8.jpg');
+}
+
+.route a,
+.route router-link {
+  color: white;
+  text-decoration: none;
+}
 
   </style>

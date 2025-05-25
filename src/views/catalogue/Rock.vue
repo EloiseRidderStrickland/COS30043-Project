@@ -40,7 +40,7 @@
       <div class="row">
         
       <div class="col-sm-4 theme-option">
-        <router-link to="/cholla-details" class="card-link mb-3">
+        <router-link to="/extra" class="card-link mb-3">
           <label for="wood" class="box rock1">
             <span class="theme-label">Pumice Stone</span>
             <span class="theme-labelx">$2.95 per kg</span>
@@ -57,7 +57,7 @@
       </div>  
 
       <div class="col-sm-4 theme-option">
-        <router-link to="/malaysian-details" class="card-link mb-3">
+        <router-link to="/extra" class="card-link mb-3">
           <label for="wood" class="box rock2">
             <span class="theme-label">Igneous Rock</span>
             <span class="theme-labelx">$1.98 per kg</span>
@@ -73,7 +73,7 @@
       </div> 
 
       <div class="col-sm-4 theme-option">
-        <router-link to="/mopani-details" class="card-link mb-3">
+        <router-link to="/extra" class="card-link mb-3">
           <label for="wood" class="box rock3">
             <span class="theme-label">Stone</span>
             <span class="theme-labelx">$4.90 per kg</span>
@@ -89,7 +89,7 @@
       </div> 
 
       <div class="col-sm-4 theme-option">
-        <router-link to="/manzanite-details" class="card-link mb-3">
+        <router-link to="/extra" class="card-link mb-3">
           <label for="wood" class="box rock4">
             <span class="theme-label">Sedimentary rocks</span>
             <span class="theme-labelx">$2.40 per kg</span>
@@ -106,7 +106,7 @@
       </div> 
 
       <div class="col-sm-4 theme-option">
-        <router-link to="/spiderwood-details" class="card-link mb-3">
+        <router-link to="/extra" class="card-link mb-3">
           <label for="wood" class="box rock5">
             <span class="theme-label">Limestone</span>
             <span class="theme-labelx">$5.20 per kg</span>
@@ -123,7 +123,7 @@
       </div> 
       
       <div class="col-sm-4 theme-option">
-        <router-link to="/pacific-details" class="card-link mb-3">
+        <router-link to="/extra" class="card-link mb-3">
           <label for="wood" class="box rock6">
             <span class="theme-label">Quartzite</span>
             <span class="theme-labelx">$5.99 per kg</span>
@@ -156,7 +156,7 @@
       <div class="row">
 
       <div class="col-sm-4 theme-option">
-        <router-link to="/coastal-details" class="card-link mb-3">
+        <router-link to="/extra" class="card-link mb-3">
           <label for="wood" class="box rock7">
             <span class="theme-label">Black Sand</span>
             <span class="theme-labelx">$7.99 per kg</span>
@@ -173,7 +173,7 @@
       
         
       <div class="col-sm-4 theme-option">
-        <router-link to="/coastal-details" class="card-link mb-3">
+        <router-link to="/extra" class="card-link mb-3">
           <label for="wood" class="box rock8">
             <span class="theme-label">Grey Sand</span>
             <span class="theme-labelx">$7.10 per kg</span>
@@ -189,7 +189,7 @@
       </div>
       
       <div class="col-sm-4 theme-option">
-        <router-link to="/bogwood-details" class="card-link mb-3">
+        <router-link to="/extra" class="card-link mb-3">
           <label for="wood" class="box rock9">
             <span class="theme-label">White Sand</span>
             <span class="theme-labelx">$3.98 per kg</span>
@@ -205,7 +205,7 @@
       </div> 
 
       <div class="col-sm-4 theme-option">
-        <router-link to="/coastal-details" class="card-link mb-3">
+        <router-link to="/extra" class="card-link mb-3">
           <label for="wood" class="box rock10">
             <span class="theme-label">Coastal Sand</span>
             <span class="theme-labelx">$2.99 per kg</span>
@@ -222,7 +222,7 @@
       </div>
         
       <div class="col-sm-4 theme-option">
-        <router-link to="/coastal-details" class="card-link mb-3">
+        <router-link to="/extra" class="card-link mb-3">
           <label for="wood" class="box rock11">
             <span class="theme-label">Coarse Sand</span>
             <span class="theme-labelx">$1.98 per kg</span>
@@ -238,7 +238,7 @@
       </div>
       
       <div class="col-sm-4 theme-option">
-        <router-link to="/bogwood-details" class="card-link mb-3">
+        <router-link to="/extra" class="card-link mb-3">
           <label for="wood" class="box rock12">
             <span class="theme-label">Red Sand</span>
             <span class="theme-labelx">$5.50 per kg</span>

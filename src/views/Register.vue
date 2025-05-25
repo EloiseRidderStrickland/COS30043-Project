@@ -1,14 +1,12 @@
-
 <template>
   <div class="outer main" :class="selectPlace">
+    <div class="containerxy">
+
+<!------ NAVIGATION ------>
 
         <div class="col-1 route">
             <router-link to="/"><strong>Back</strong></router-link>
         </div>
-
-    <div class="containerxy">
-
-<!------ NAVIGATION ------>
 
         <div class="company col-sm mt-3">
           <div>Air-iums.com</div>
@@ -22,10 +20,10 @@
     
 <!------ FORM ------>
     <div class="col-sm body">
-      <form>
+      <form @submit.prevent="submitForm">
       
 <!------ FULL NAME ------>
-    <div>
+    <div class="form-section">
       <div class="row">
         <h4>Full Name *</h4>
         <div class="col-sm-6">
@@ -40,7 +38,7 @@
     </div>
 
 <!------ USERNAME / MOBILE NUMBER ------>
-    <div>
+    <div class="form-section" v-show="isFullNameComplete">
       <div class="row">
         <div class="col-sm-6">
           <label for="uname">Username</label>
@@ -54,7 +52,7 @@
     </div>
 
 <!------ PASSWORD / CONFIRM ------>
-    <div>
+    <div class="form-section" v-show="isBasicInfoComplete">
       <div class="row">
         <div class="col-sm-6">
           <label for="password">Password</label>
@@ -76,7 +74,7 @@
 
 <!------ ADDRESS DETAILS ------>
 
-    <div>
+    <div class="form-section" v-show="isPasswordComplete">
       <div class="row">
           <h4>Address *</h4>
           <div class="col-sm-12">
@@ -97,19 +95,19 @@
               <option value="qld">Queensland</option>
               <option value="wa">Western Australia</option>
               <option value="sa">South Australia</option>
-              <option value="nt">Northen Territory</option>
+              <option value="nt">Northern Territory</option>
               <option value="tm">Tasmania</option>
             </select>
           </div>
 
           <div class="col-sm-12">
             <label for="postcode">Postal / Zip Code</label>
-            <input type="text" id="poscode" v-model="postcode" placeholder="Postal / Zip Code" name="Postcode" required>
+            <input type="text" id="postcode" v-model="postcode" placeholder="Postal / Zip Code" name="Postcode" required>
           </div>
         </div>
     </div>
-    <!--<input type="checkbox" id="showterms" name="showterms" value="Terms">-->
     
+    <div v-show="isAddressComplete">
         <button type="button" class="button" @click="toggleTerms">Terms & Conditions</button>
         <div v-if="showTerms" class="terms-popup">
 
@@ -125,7 +123,8 @@
 
           <button type="button" class="buttonx" @click="acceptTerms">Accept</button>
         </div>
-          <button type="submit" class="register">Register</button>
+          <button type="submit" class="register" :disabled="!canSubmit">Register</button>
+    </div>
     </form>
   </div>
     
@@ -152,6 +151,23 @@ export default {
       showTerms: false,
     };
   },
+  computed: {
+    isFullNameComplete() {
+      return this.fname.trim() && this.lname.trim();
+    },
+    isBasicInfoComplete() {
+      return this.isFullNameComplete && this.uname.trim() && this.mnumber.trim();
+    },
+    isPasswordComplete() {
+      return this.isBasicInfoComplete && this.password && this.confirmPassword && this.email.trim();
+    },
+    isAddressComplete() {
+      return this.isPasswordComplete && this.address.trim() && this.suburb.trim() && this.state && this.postcode.trim();
+    },
+    canSubmit() {
+      return this.isAddressComplete && this.termsAccepted;
+    }
+  },
   methods: {
     toggleTerms() {
       this.showTerms = !this.showTerms;
@@ -160,11 +176,9 @@ export default {
       this.termsAccepted = true;
       this.showTerms = false;
     },
-    submitForm(event) {
-      // Stop form if terms not accepted
+    submitForm() {
       if (!this.termsAccepted) {
         alert("You must accept the Terms and Conditions first.");
-        event.preventDefault();
         return;
       }
     
@@ -178,125 +192,104 @@ export default {
       // First Name
       if (!this.fname || !nameRegex.test(this.fname)) {
         alert("First Name is required and must contain letters only.");
-        event.preventDefault();
         return;
       }
     
       // Last Name
       if (!this.lname || !nameRegex.test(this.lname)) {
         alert("Last Name is required and must contain letters only.");
-        event.preventDefault();
         return;
       }
     
       // Username
       if (!this.uname || this.uname.length < 3) {
         alert("Username is required and must be at least 3 characters.");
-        event.preventDefault();
         return;
       }
     
       // Password
       if (!this.password || !passwordRegex.test(this.password)) {
         alert("Password must be at least 8 characters and include at least one special character ($, %, ^, &, *).");
-        event.preventDefault();
         return;
       }
     
       // Confirm Password
       if (this.password !== this.confirmPassword) {
         alert("Passwords do not match.");
-        event.preventDefault();
         return;
       }
     
       // Email
       if (!this.email || !emailRegex.test(this.email)) {
         alert("Please enter a valid email address. 'example@mail.com'");
-        event.preventDefault();
         return;
       }
     
       // Street Address (optional, max 40)
       if (this.address && this.address.length > 40) {
         alert("Street Address cannot exceed 40 characters.");
-        event.preventDefault();
         return;
       }
     
       // Suburb (optional, max 20)
       if (this.suburb && this.suburb.length > 20) {
         alert("Suburb cannot exceed 20 characters.");
-        event.preventDefault();
         return;
       }
     
       // Postcode
       if (!postcodeRegex.test(this.postcode)) {
         alert("Postcode must be a 4 digit number.");
-        event.preventDefault();
         return;
       }
     
       // Mobile Number
       if (!mobileRegex.test(this.mnumber)) {
         alert("Mobile Number must be 10 digits and start with 04.");
-        event.preventDefault();
         return;
       }
     
-      // Date of Birth (must be valid and 16+ years old)
-      if (!this.isValidDOB(this.dob)) {
-        alert("You must enter a valid Date of Birth and be at least 16 years old.");
-        event.preventDefault();
-        return;
-      }
-    
-      // Preferred Job Category
-      if (!this.jobCategory) {
-        alert("Please select a Preferred Job Category.");
-        event.preventDefault();
-        return;
-      }
-    
-      // Everything valid -> manually submit form
-      event.target.submit();
-    },
-    isValidDOB(dobString) {
-      // Expecting dd/mm/yyyy
-      const parts = dobString.split('/');
-      
-      if (parts.length !== 3) return false;
-    
-      const day = parseInt(parts[0], 10);
-      const month = parseInt(parts[1], 10) - 1; // JS months are 0-indexed
-      const year = parseInt(parts[2], 10);
-    
-      // Validate the date using Date constructor
-      const dob = new Date(year, month, day);
-    
-      // Check if the created date matches the original input (handles invalid dates like 31/02)
-      if (dob.getDate() !== day || dob.getMonth() !== month || dob.getFullYear() !== year) {
-        return false;
-      }
-    
-      const today = new Date();
-      const age = today.getFullYear() - dob.getFullYear();
-      const m = today.getMonth() - dob.getMonth();
-      
-      // If the month is before the current month, or it's the same month but the day is before today
-      if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
-        return age - 1; // The birthday hasn't occurred yet this year
-      }
-    
-      return age >= 16; // Must be at least 16 years old
-    }   
-    
+      // If all validations pass, navigate to confirmation page
+      const formData = {
+        fname: this.fname,
+        lname: this.lname,
+        uname: this.uname,
+        email: this.email,
+        address: this.address,
+        suburb: this.suburb,
+        state: this.state,
+        postcode: this.postcode,
+        mnumber: this.mnumber
+      };
+
+      // Navigate to confirmation page with form data
+      this.$router.push({
+        name: 'confirmation',
+        query: { data: JSON.stringify(formData) }
+      });
+    }
   },
 }  
 </script>
 
 <style scoped>
+
+.form-section {
+  opacity: 0;
+  animation: slideIn 0.5s ease-in-out forwards;
+  margin-bottom: 20px;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 select
 {
@@ -331,7 +324,7 @@ select {
 }
 
 .register {
-  background: rgba(215, 56, 56, 0.3);
+  background: rgba(255, 255, 255, 0.5);
   color: rgb(255, 255, 255);
   transition: all 0.5s;
   border-radius: 20px;
@@ -350,15 +343,22 @@ select {
   transform: scale(102%);
 }
 
+.register:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .containerxy
 {
   display: inline-block;
   backdrop-filter: blur(4px);
-  background-color: rgba(36, 35, 35, 0.3);
+  background-color: rgba(36, 35, 35, 0.6);
   transition: transform .2s;
   border-radius: 20px;
   padding: 30px;
+  max-width: 600px;
 }
+  
   
 h3 
 {
@@ -367,10 +367,8 @@ h3
 } 
 
 .main {
-  width: calc(100vw - 40px);
-  height: calc(100vh - 40px);
   margin: 20px;
-  background-image: url('/assets/dark-trees.jpg');
+  background-image: url('/collage/terra-10.jpg');
   background-color: rgb(88, 107, 87);
   border-radius: 20px;
   background-position: center;
@@ -437,5 +435,4 @@ h2
   font-family: 'Kindmight', sans-serif;
   padding: 30px;
 }
-
 </style>
