@@ -322,6 +322,14 @@ select
   margin-top: 20px;
 }
 
+input {
+  background-color: rgb(255, 255, 255);
+}
+
+select {
+  background-color: rgb(255, 255, 255);
+}
+
 .register {
   background: rgba(215, 56, 56, 0.3);
   color: rgb(255, 255, 255);

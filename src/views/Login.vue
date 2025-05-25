@@ -156,6 +156,10 @@ export default {
   transform: scale(102%);
 }
 
+input {
+  background-color: rgb(255, 255, 255);
+}
+
 .themerow {
   display: flex;
   flex-wrap: wrap;
@@ -191,7 +195,6 @@ h3
 .theme-option label {
   cursor: pointer;
   display: inline-block;
-  width: 100%;
   transition: all 0.2s ease;
   position: relative;
   overflow: hidden;
@@ -205,25 +208,26 @@ h3
   background: rgba(0, 0, 0, 0.7);
   color: white;
   padding: 4px 8px;
-  border-radius: 12px;
   font-size: 12px;
   font-weight: bold;
   text-align: center;
-  min-width: 60px;
 }
 
-.radio_item:checked + label {
+.radio_item:checked + label 
+{
   transform: scale(1.05);
   box-shadow: 0 0 0 3px #ffffff, 0 0 0 6px rgba(255, 255, 255, 0.3);
   border: 2px solid #ffffff;
 }
 
-.theme-option label:hover {
+.theme-option label:hover 
+{
   transform: scale(1.02);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.radio_item:checked + label:hover {
+.radio_item:checked + label:hover 
+{
   transform: scale(1.05);
   box-shadow: 0 0 0 3px #ffffff, 0 0 0 6px rgba(255, 255, 255, 0.3);
 }
