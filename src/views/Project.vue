@@ -149,7 +149,7 @@ h3
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-image: url('collage/terra-8.jpg');
+  background-image: url('/collage/terra-8.jpg');
 }
 
 .route a,
