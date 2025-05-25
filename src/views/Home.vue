@@ -56,7 +56,7 @@
   <div class="main outer">
    <div class="row">
       <div class="col-md theme-option">
-        <div class="card-link">
+        <div class="card-link mb-3">
           <label for="catag" class="box welcome">
             <span class="theme-label-header">Welcome!</span>
           </label>
@@ -102,7 +102,7 @@
       <div class="row">
           
       <div class="col-md theme-option">
-        <div class="card-link">
+        <div class="card-link mb-3">
           <label for="catag" class="box terrabox1">
             <span class="theme-label">Terrariums</span>
           </label>
@@ -115,7 +115,7 @@
       </div> 
 
       <div class="col-md theme-option">
-        <div class="card-link">
+        <div class="card-link mb-3">
           <label for="catag" class="box terrabox2">
             <span class="theme-label">Aqua-dariums</span>
           </label>
@@ -127,7 +127,7 @@
       </div> 
 
       <div class="col-md theme-option">
-        <div class="card-link">
+        <div class="card-link mb-3">
           <label for="catag" class="box terrabox3">
             <span class="theme-label">Ripariums</span>
           </label>

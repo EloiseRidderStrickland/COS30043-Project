@@ -138,8 +138,10 @@
             </span>
         </router-link>
       </div>
-
-      <div class="outer divider">
+    </div>
+  </div>
+      
+  <div class="outer divider">
     <div class="col-sm">
         <div class="row">
 
@@ -149,6 +151,9 @@
         </div>
     </div>
   </div>
+
+    <div class="outer">
+      <div class="row">
 
       <div class="col-sm-4 theme-option">
         <router-link to="/coastal-details" class="card-link mb-3">
@@ -165,6 +170,7 @@
             </span>
         </router-link>
       </div>
+      
         
       <div class="col-sm-4 theme-option">
         <router-link to="/coastal-details" class="card-link mb-3">

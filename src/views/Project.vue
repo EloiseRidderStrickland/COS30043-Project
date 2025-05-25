@@ -32,9 +32,7 @@
   <!--==================================================== HEADER BAR END ====================================================-->
 
   <div class="main">
-
-    <div class="main-body p-3 mt-5">
-    
+   <div class="main-body p-3 mt-5">
     <div class="col-12 p-3">
       <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
@@ -43,31 +41,7 @@
         pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
         deserunt mollit anim id est laborum."
       </p>
-    </div>
-    
-      <div class="row">
-          <div class="box col-sm m-1">
-            <p>Column 1</p>
-          </div>
-
-          <div class="box col-sm m-1">
-            <p>Column 2</p>
-          </div>
-  
-          <div class="box col-sm m-1">
-            <p>Column 3</p>
-          </div>
-
-          <div class="box col-sm m-1">
-            <p>Column 4</p>
-          </div>
-  
-          <div class="box col-sm m-1">
-            <p>Column 5</p>
-          </div>
-      </div>
-  
-
+     </div>
     </div>
   </div>
 

@@ -30,44 +30,46 @@
 
   </header>
   <!--==================================================== HEADER BAR END ====================================================-->
+ 
 
-  <div class="main">
+  <div class="outer main">
+    <div class="col-sm p-3">
+      <div class="pagbox">
+          <h1>Sponsors</h1>
 
-    <div class="main-body p-3 mt-5">
-    
-    <div class="col-12 p-3">
-      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
-        deserunt mollit anim id est laborum."
-      </p>
-    </div>
-    
-      <div class="row">
-          <div class="box col-sm m-1">
-            <p>Column 1</p>
-          </div>
+          <v-table>
+            <thead>
+              <tr>
+                <th>Memeber</th>
+                <th>Company</th>
+                <th>Donation</th>
+                <th>Contribution</th>
+              </tr>
+            </thead>
+            <!-- Using v-for to loop units and list them -->
+            <tbody>
+              <tr v-for="unit in getItems"  >
+                <td>{{unit.code}}</td>
+                <td>{{unit.desc}}</td>
+                <td>{{unit.cp}}</td>
+                <td>{{unit.type}}</td>
+              </tr>
+            </tbody>
+        </v-table>
 
-          <div class="box col-sm m-1">
-            <p>Column 2</p>
-          </div>
-  
-          <div class="box col-sm m-1">
-            <p>Column 3</p>
-          </div>
-
-          <div class="box col-sm m-1">
-            <p>Column 4</p>
-          </div>
-  
-          <div class="box col-sm m-1">
-            <p>Column 5</p>
-          </div>
+        <!-- Vue Paginate template -->
+        <paginate 
+          :page-count="5"    
+          :page-range="3" 
+          :margin-pages="1"
+          :click-handler="clickCallback" 
+          :prev-text=" '<' " 		
+          :next-text="'>'" 
+          :container-class="'pagination'" 
+          :active-class="'currentPage'"
+          >
+        </paginate>
       </div>
-  
-
     </div>
   </div>
 
@@ -102,18 +104,110 @@
   </template>
 
   <style scoped>
-   
-    .box
-    {
-      color: rgb(255, 255, 255);
-      text-align: center;
-      background-color: rgb(74, 95, 89); 
-      border-radius: 5px;
-    }
+  
+  .subheader
+  {
+    font-family: 'Kindmight', sans-serif;
+  }
 
-    .subheader
-    {
-      font-family: 'Kindmight', sans-serif;
-    }
+  h1
+  {
+    font-family: 'Kindmight', sans-serif;
+    font-size: 40px;
+  }
+
+  .main
+  {
+    background-image: url('/collage/terra-3.jpg');
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+  }
+
+  .pagination 
+  {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 20px;
+  }
+
+  td
+  {
+    text-align: left;
+    font-size: 20px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+    color: rgb(255, 255, 255);
+  }
+ 
+  th
+  {
+    text-align: left;
+    padding-bottom: 10px;
+    font-size: 20px;
+    color: rgb(80, 95, 205);
+  }
+
+  .pagbox
+  {
+    padding: 20px;;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.4);  
+    color: rgb(255, 255, 255);
+  }
+
 
   </style>
+
+ <script>
+import VuejsPaginate from 'vuejs-paginate-next'
+
+export default {
+  components: {
+    paginate: VuejsPaginate,
+  },
+  
+  data() {
+    return {
+      currentPage: 1,
+      msg: [],
+      err: null
+    }
+  },
+
+  mounted() {
+    fetch('sponsors.json')
+        .then(response => {
+            console.log("Fetch status:", response.status);
+            if (!response.ok) {
+                throw new Error('No File loaded');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log("Fetched data:", data);
+            this.msg = data; 
+        })
+        .catch(error => {
+            this.err = error.message;
+            console.error('Fetch error:', error);
+        });
+  },
+
+  computed: {
+    getItems() {
+      let current = this.currentPage * 3;
+      let start = current - 3;
+      return this.msg.slice(start, current);
+    }
+  },
+
+  methods: {
+    clickCallback(pageNum) {
+      this.currentPage = Number(pageNum);
+    }
+  }
+}
+</script>
