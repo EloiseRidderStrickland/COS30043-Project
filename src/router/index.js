@@ -28,4 +28,5 @@ const router = createRouter ({
      history: createWebHistory('/cos30043/s104934718/Project/'),
      routes,
 })
+
 export default router
